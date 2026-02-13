@@ -56,3 +56,25 @@ if __name__ == "__main__":
     dataset_root = "/home/s114/yolo/dataset"
     cleanup_dataset(dataset_root)
     print("\n数据集清理完成！")
+
+
+'''
+找到标注有问题的数据：单张图重复标注
+cd /home/s114/yolo/dataset/labels/train
+for f in *.txt; do
+  n=$(wc -l < "$f")
+  if [ "$n" -gt 1 ]; then
+    echo "$f 有 $n 行(个框)"
+  fi
+done
+
+cd /home/s114/yolo/dataset/labels/val
+for f in *.txt; do
+  n=$(wc -l < "$f")
+  if [ "$n" -gt 1 ]; then
+    echo "$f 有 $n 行(个框)"
+  fi
+done
+
+
+'''
