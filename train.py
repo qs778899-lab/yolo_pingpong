@@ -1,4 +1,9 @@
 from ultralytics import YOLO
+# 限制 PyTorch 内部计算使用的 CPU 线程数 (建议设为 2 或 4)
+torch.set_num_threads(6)
+# 限制底层库 (如 OpenBLAS, MKL) 使用的线程数
+os.environ["OMP_NUM_THREADS"] = "6"
+os.environ["MKL_NUM_THREADS"] = "6"
 
 # conda activate yolov11 && python train.py
 
