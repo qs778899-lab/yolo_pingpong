@@ -52,6 +52,10 @@
 
     mkdir -p build && cd build
 
+    cmake ..
+
+    make -j$(nproc)
+
     cd ..
 
     ./build/pingpong_detect
@@ -62,4 +66,3 @@
 
 5. 运行模型测试相机实时图像：
 
-    
