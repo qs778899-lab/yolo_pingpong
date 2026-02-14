@@ -32,3 +32,10 @@ with open('runs/detect/pingpong2/results.csv') as f:
     print('best.pt 对应的是第', epoch, '轮 (epoch)，该轮 mAP50-95 =', round(m, 4))
 "
 '''
+
+'''
+查看当前conda环境的cuda版本：
+python -c "import torch; print(torch.version.cuda)"
+
+12.8
+'''
