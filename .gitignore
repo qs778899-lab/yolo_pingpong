@@ -6,3 +6,18 @@ runs/
 
 *.pt
 *.onnx
+
+images/
+
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.webp
+*.gif
+*.ico
+*.tiff
+*.tif
+*.svg
+*.eps
+*.pdf
