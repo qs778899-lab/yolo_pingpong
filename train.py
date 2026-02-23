@@ -14,6 +14,7 @@ model = YOLO("yolo11n.pt")  # load a pretrained model
 # model = YOLO("runs/detect/pingpong2/weights/epoch50.pt")
 # Train the model
 results = model.train(data="/home/s114/yolo/dataset/pingpong.yaml", epochs=1500, imgsz=960, device=0, cache=False, plots=True, save_period=20, workers=4, batch=8, name="pingpong")
+# workers影响CPU，batch影响GPU。
 # results = model.train(data="/home/s114/yolo/dataset/pingpong.yaml", epochs=30, imgsz=640, device='cpu')
 
 
