@@ -5,7 +5,7 @@ import os
 # conda activate yolov11  &&  python export_onnx.py
 
 # 1. 加载训练好的 PyTorch 模型 (.pt)
-model_path = "runs/detect/pingpong2/weights/best.pt"
+model_path = "runs/detect/pingpong7/weights/best.pt"
 model = YOLO(model_path)
 
 # 2. 导出为 ONNX 格式

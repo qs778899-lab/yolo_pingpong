@@ -31,6 +31,14 @@
     --minShapes=images:1x3x960x960 \
     --optShapes=images:1x3x960x960 \
     --maxShapes=images:1x3x960x960
+    如果batch=2: /usr/src/tensorrt/bin/trtexec 
+    --onnx=yolo/weights/best.onnx \
+    --saveEngine=yolo/weights/best.engine \
+    --minShapes=images:1x3x960x960 \
+    --optShapes=images:2x3x960x960 \
+    --maxShapes=images:4x3x960x960 \
+    --fp16
+
 
 2. 确认分支： 
 
