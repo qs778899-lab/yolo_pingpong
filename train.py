@@ -9,9 +9,9 @@ os.environ["MKL_NUM_THREADS"] = "6"
 
 # conda activate yolov11 && python train.py
 
-# model = YOLO("yolo11n.pt")  # load a pretrained model
+model = YOLO("yolo11n.pt")  # load a pretrained model
 # 加载之前的阶段性成果
-model = YOLO("runs/detect/pingpong6/weights/last.pt")
+# model = YOLO("runs/detect/pingpong6/weights/last.pt")
 # Train the model
 results = model.train(data="/home/s114/yolo/dataset/pingpong.yaml", epochs=1200, imgsz=960, device=0, cache=False, plots=True, save_period=50, workers=4, batch=12, name="pingpong")
 # workers影响CPU，batch影响GPU。
